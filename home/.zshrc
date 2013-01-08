@@ -42,12 +42,12 @@ source ~/.profile
 # Source local configs (files we don't intend to put into source control)
 if [ -f ~/.aliases.local ]; then
 source $HOME/.aliases.local
-end
+fi
 
 if [ -f ~/.chef/env ]; then
 source $HOME/.chef/env
-end
+fi
 
 if [ -f ~/.profile.local ]; then
 source $HOME/.profile.local
-end
+fi
