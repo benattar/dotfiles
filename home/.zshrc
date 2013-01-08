@@ -40,6 +40,14 @@ unsetopt correct_all
 source ~/.profile
 
 # Source local configs (files we don't intend to put into source control)
-source $HOME/aliases.local
+if [ -f ~/.aliases.local ]; then
+source $HOME/.aliases.local
+end
+
+if [ -f ~/.chef/env ]; then
 source $HOME/.chef/env
+end
+
+if [ -f ~/.profile.local ]; then
 source $HOME/.profile.local
+end
