@@ -1,0 +1,32 @@
+[push]
+  default = tracking
+[format]
+  pretty = %Cblue%h%Creset %Cgreen[%ar]%Creset (%an) %s
+[alias]
+    st = status
+    ci = commit
+    co = checkout
+    di = diff
+    dc = diff --cached
+    aa = add --all
+    fa = fetch --all
+    pom = push origin master
+    pod = push origin develop
+    pot = push origin --tags
+	up = !git fetch origin && git rebase origin/master
+	mm = !git checkout master && git merge @{-1} --ff-only
+[user]
+	name = Nathaniel R. Ben-Attar
+	email = benattar@gmail.com
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[core]
+	editor = vim
+[color]
+    ui = auto
+[github]
+	user = benattar

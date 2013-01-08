@@ -1,0 +1,24 @@
+source :rubygems
+source "http://rubygems.org"
+gem "berkshelf"
+gem 'chef'
+gem 'knife-rackspace'
+gem 'knife-ec2'
+gem 'knife-openstack'
+gem 'knife-google'
+gem 'knife-linode'
+gem 'knife-eucalyptus'
+gem 'activesupport'
+gem 'homesick'
+gem 'hub'
+
+group :development do
+	gem 'vagrant'
+	gem 'veewee'
+end
+
+group :test do
+	gem 'cucumber'
+	gem 'rspec-expectations'
+	gem 'rest-client'
+end
